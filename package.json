@@ -1,0 +1,20 @@
+{
+  "name": "address-webpack-plugin",
+  "version": "1.0.0",
+  "description": "print access info after webpack compilation done",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elvinzhu/address-webpack-plugin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elvinzhu/address-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/elvinzhu/address-webpack-plugin#readme"
+}

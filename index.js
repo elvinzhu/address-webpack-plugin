@@ -20,7 +20,7 @@ class DonePlugin {
     this.config = config;
   }
   apply(compiler) {
-    compiler.hooks.done.tap("Done Plugin", (stats) => {
+    compiler.hooks.done.tap("address-webpack-plugin", (stats) => {
       print(this.config);
     });
   }

@@ -1,6 +1,6 @@
 {
   "name": "address-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "print access info after webpack compilation done",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/elvinzhu/address-webpack-plugin.git"
   },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
   "keywords": [],
   "author": "",
   "license": "MIT",

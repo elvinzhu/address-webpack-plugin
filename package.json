@@ -1,6 +1,6 @@
 {
   "name": "address-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "print access info after webpack compilation done",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/elvinzhu/address-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/elvinzhu/address-webpack-plugin#readme"
+  "homepage": "https://github.com/elvinzhu/address-webpack-plugin#readme",
+  "devDependencies": {
+    "chalk": "^4.1.0"
+  }
 }

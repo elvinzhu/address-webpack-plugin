@@ -2,6 +2,7 @@ const chalk = require("chalk");
 const os = require("os");
 
 const ipArr = Array.prototype.concat.apply([], Object.values(os.networkInterfaces())).filter((item) => item.family === "IPv4" && !item.internal);
+const pluginName = "address-webpack-plugin";
 
 function print(config) {
   const { port = "8080", openPage = "/" } = config;
@@ -15,15 +16,21 @@ function print(config) {
   }, 100);
 }
 
-class DonePlugin {
+class AddressWebpackPlugin {
   constructor(config) {
-    this.config = config;
+    this.config = config || {};
   }
   apply(compiler) {
-    compiler.hooks.done.tap("address-webpack-plugin", (stats) => {
-      print(this.config);
-    });
+    const config = this.config;
+    const compilerHookName = config.compilerHookName || "done";
+    if (compiler.hooks[compilerHookName]) {
+      compiler.hooks[compilerHookName].tap(pluginName, () => {
+        print(config);
+      });
+    } else {
+      console.error(chalk.red(`[${pluginName}]: tap hook '${compilerHookName}' failed`));
+    }
   }
 }
 
-module.exports = DonePlugin;
+module.exports = AddressWebpackPlugin;

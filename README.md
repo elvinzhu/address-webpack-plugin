@@ -18,6 +18,7 @@ module.exports = {
         new AddressPlugin({
             port: 8080,
             openPage: '/',
+            // compilerHookName: 'done' // compiler hook to use. default to 'done'
         }),
     ]
     ...
